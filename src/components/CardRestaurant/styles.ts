@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import styled from 'styled-components'
 
 import { colors } from '../../styles/styles'
@@ -7,8 +9,11 @@ export const Card = styled.li`
   display: flex;
   flex-direction: column;
   position: relative;
-  color: ${colors.lightPink};
   border-radius: 6px;
+`
+
+export const LinkCard = styled(Link)`
+  color: ${colors.lightPink};
 `
 
 export const Img = styled.img`
