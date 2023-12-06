@@ -14,4 +14,12 @@ export const CardMenuContainer = styled.li`
     height: 166px;
     object-fit: cover;
   }
+
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
 `

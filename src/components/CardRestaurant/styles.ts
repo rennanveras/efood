@@ -20,6 +20,7 @@ export const Img = styled.img`
   width: 100%;
   height: 216px;
   object-fit: cover;
+  display: block;
 `
 export const AreaDestaque = styled.div`
   position: absolute;
@@ -34,12 +35,14 @@ export const AreaDestaque = styled.div`
 export const AreaInfos = styled.div`
   padding: 8px;
   border: 1px solid ${colors.lightPink};
-  border-top: none;
+  border-top: transparent;
+  background-color: ${colors.white};
 `
 
 export const Title = styled.h3`
   font-size: 18px;
   font-weight: 18px;
+  line-height: 22px;
 `
 export const Centralizer = styled.div`
   display: flex;
@@ -52,6 +55,7 @@ export const AreaTitle = styled(Centralizer)`
 
   svg {
     margin-bottom: 3px;
+    margin-left: 6px;
     path {
       color: orange;
     }
