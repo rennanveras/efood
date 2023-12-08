@@ -38,3 +38,9 @@ export const BannerContainer = styled.div`
     }
   }
 `
+export const Title = styled.h2`
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  color: ${colors.white};
+`

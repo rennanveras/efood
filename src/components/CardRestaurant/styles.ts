@@ -10,9 +10,6 @@ export const Card = styled.li`
   flex-direction: column;
   position: relative;
   border-radius: 6px;
-`
-
-export const LinkCard = styled(Link)`
   color: ${colors.lightPink};
 `
 
@@ -44,22 +41,28 @@ export const Title = styled.h3`
   font-weight: 18px;
   line-height: 22px;
 `
-export const Centralizer = styled.div`
+export const AreaNote = styled.div`
   display: flex;
   align-items: center;
-`
+  gap: 8px;
 
-export const AreaTitle = styled(Centralizer)`
-  justify-content: space-between;
-  margin-bottom: 16px;
+  span {
+    font-weight: bold;
+  }
 
   svg {
     margin-bottom: 3px;
-    margin-left: 6px;
     path {
       color: orange;
     }
   }
+`
+
+export const AreaTitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
 `
 export const Description = styled.p`
   font-size: 14px;

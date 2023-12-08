@@ -13,27 +13,18 @@ export const FooterContainer = styled.footer`
   }
 `
 
-export const ListRedeSocial = styled.ul`
+export const ListRedeSocial = styled.div`
   margin-top: 32px;
   display: flex;
   gap: 8px;
   justify-content: center;
 `
 
-export const ItemRedeSocial = styled.li`
-  padding: 8px;
-  padding-bottom: 6px;
-  border-radius: 50%;
-  background-color: ${colors.lightPink};
-  color: ${colors.cream};
-  font-size: 12px;
-`
-
 export const InfoFooter = styled.p`
+  margin-top: 80px;
   font-size: 10px;
   line-height: 12px;
   text-align: center;
-  padding-top: 80px;
   max-width: 480px;
   width: 100%;
 `

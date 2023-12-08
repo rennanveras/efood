@@ -8,5 +8,5 @@ export const ContainerListMenu = styled.section`
 export const ListMenu = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4%;
+  gap: 32px;
 `

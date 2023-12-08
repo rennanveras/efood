@@ -1,8 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
-
-type Props = {
-  whatcolor: 'white' | 'pink'
-}
+import { createGlobalStyle } from 'styled-components'
 
 export const colors = {
   lightPink: '#E66767',
@@ -33,12 +29,4 @@ export const GlobalCss = createGlobalStyle`
       }
     }
   }
-`
-
-export const Title = styled.h2<Props>`
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 42px;
-  color: ${(props) =>
-    props.whatcolor === 'white' ? colors.white : colors.lightPink};
 `

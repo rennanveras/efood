@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
   background-image: url(${background});
-  padding-top: 64px;
-  padding-bottom: 40px;
+  padding-top: 44px;
+  padding-bottom: 66px;
   font-weight: bold;
   color: ${colors.lightPink};
+  font-size: 18px;
 
   .container {
     display: flex;

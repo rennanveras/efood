@@ -8,9 +8,9 @@ const Hero = () => {
     <S.Hero>
       <div className="container">
         <img src={logo} alt="" />
-        <Sg.Title whatcolor="pink">
+        <S.Title>
           Viva experiências gastronômicas no conforto da sua casa
-        </Sg.Title>
+        </S.Title>
       </div>
     </S.Hero>
   )
