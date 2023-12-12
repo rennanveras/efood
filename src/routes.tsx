@@ -5,8 +5,8 @@ import Menu from './pages/Menu'
 
 const Rotas = () => (
   <Routes>
-    <Route path="/" element={<Home />} />;
-    <Route path="/cardapio" element={<Menu />} />;
+    <Route path="/" element={<Home />} />
+    <Route path="/cardapio/:id" element={<Menu />} />
   </Routes>
 )
 

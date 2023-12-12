@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 import styled from 'styled-components'
 
 import { colors } from '../../styles/styles'
@@ -67,8 +65,5 @@ export const AreaTitle = styled.div`
 export const Description = styled.p`
   font-size: 14px;
   margin-bottom: 16px;
-  text-overflow: ellipsis;
   line-height: 22px;
-  overflow: hidden;
-  height: 66px;
 `
