@@ -33,7 +33,7 @@ const Modal = ({ isOpen, closeModal, item }: Props) => {
             <h3>{item?.nome}</h3>
             <p>
               {item?.descricao}
-              <span>{item?.porcao}</span>
+              <span>serve: {item?.porcao}</span>
             </p>
             <Button
               title="Adicione agora este produto ao carrinho"

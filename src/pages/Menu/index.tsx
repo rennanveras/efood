@@ -24,7 +24,11 @@ const Menu = () => {
   return (
     <>
       <Header />
-      <Banner imageBanner={restaurant.capa} />
+      <Banner
+        imageBanner={restaurant.capa}
+        tipo={restaurant.tipo}
+        title={restaurant.titulo}
+      />
       <ListMenu product={restaurant.cardapio} />
     </>
   )

@@ -2,14 +2,16 @@ import * as S from './styles'
 
 type Props = {
   imageBanner: string
+  tipo: string
+  title: string
 }
 
-const Banner = ({ imageBanner }: Props) => {
+const Banner = ({ imageBanner, tipo, title }: Props) => {
   return (
     <S.BannerContainer style={{ backgroundImage: `url(${imageBanner})` }}>
       <div className="container">
-        <h3>Italiana</h3>
-        <S.Title>La Dolce Vita Trattoria</S.Title>
+        <h3>{tipo}</h3>
+        <S.Title>{title}</S.Title>
       </div>
     </S.BannerContainer>
   )
