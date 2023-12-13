@@ -9,7 +9,7 @@ import TypeRestaurant from '../../types/restaurant'
 
 const Menu = () => {
   const { id } = useParams()
-  const [restaurant, setRestaurant] = useState<TypeRestaurant[]>([])
+  const [restaurant, setRestaurant] = useState<TypeRestaurant | undefined>()
 
   useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
@@ -24,8 +24,8 @@ const Menu = () => {
   return (
     <>
       <Header />
-      <Banner />
-      <ListMenu cardapio={restaurant} />
+      <Banner imageBanner={restaurant.capa} />
+      <ListMenu product={restaurant.cardapio} />
     </>
   )
 }
