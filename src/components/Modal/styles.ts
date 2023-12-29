@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { colors } from '../../styles/styles'
+import { breakPoints, colors } from '../../styles/styles'
 import { ButtonContainer } from '../../components/Button/styles'
 
 export const Modal = styled.div`
@@ -33,8 +33,13 @@ export const Modal = styled.div`
     padding: 32px;
     position: relative;
     color: ${colors.white};
-    max-height: 344px;
+    height: 344px;
     z-index: 3;
+
+    @media (max-width: ${breakPoints.tablet}) {
+      height: auto;
+      padding: 32px 16px;
+    }
   }
   .button-close {
     display: block;
@@ -49,12 +54,25 @@ export const ContentModal = styled.div`
   display: flex;
   gap: 24px;
 
+  @media (max-width: ${breakPoints.tablet}) {
+    flex-direction: column;
+  }
+
   > img {
     display: block;
     max-width: 280px;
     width: 100%;
     height: 280px;
     object-fit: cover;
+
+    @media (max-width: ${breakPoints.tablet}) {
+      max-width: 100%;
+    }
+
+    @media (max-width: ${breakPoints.mobile}) {
+      max-width: 100%;
+      height: 150px;
+    }
   }
 `
 

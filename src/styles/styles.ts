@@ -7,6 +7,12 @@ export const colors = {
   white: '#FFFFFF'
 }
 
+export const breakPoints = {
+  desktop: '1024px',
+  tablet: '768px',
+  mobile: '520px'
+}
+
 export const GlobalCss = createGlobalStyle`
   * {
     margin: 0;
@@ -24,8 +30,8 @@ export const GlobalCss = createGlobalStyle`
       max-width: 1024px;
       width: 100%;
       margin: 0 auto;
-      @media (max-width: 1024px) {
-        padding: 0 20px;
+      @media (max-width: ${breakPoints.desktop}) {
+        max-width: 80%;
       }
     }
   }

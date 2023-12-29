@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import background from '../../assets/img/background.png'
-import { colors } from '../../styles/styles'
+import { breakPoints, colors } from '../../styles/styles'
 import { Link } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
@@ -11,6 +11,10 @@ export const HeaderContainer = styled.header`
   font-weight: bold;
   color: ${colors.lightPink};
   font-size: 18px;
+
+  @media (max-width: ${breakPoints.tablet}) {
+    display: none;
+  }
 
   .container {
     display: flex;

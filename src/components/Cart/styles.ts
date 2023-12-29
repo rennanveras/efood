@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles/styles'
+import { breakPoints, colors } from '../../styles/styles'
 
 export const ContainerCart = styled.div`
   display: none;
@@ -21,6 +21,10 @@ export const SideBar = styled.aside`
   width: 100%;
   background-color: ${colors.lightPink};
   padding: 32px 8px;
+
+  @media (max-width: ${breakPoints.tablet}) {
+    max-width: 280px;
+  }
 
   ul {
     margin-bottom: 40px;

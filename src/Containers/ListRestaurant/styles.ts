@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakPoints } from '../../styles/styles'
 
 export const AreaRestaurants = styled.section`
   display: grid;
@@ -7,4 +8,8 @@ export const AreaRestaurants = styled.section`
   column-gap: 80px;
   margin-top: 80px;
   margin-bottom: 120px;
+
+  @media (max-width: ${breakPoints.tablet}) {
+    grid-template-columns: 1fr;
+  }
 `
