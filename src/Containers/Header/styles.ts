@@ -22,3 +22,10 @@ export const HeaderContainer = styled.header`
 export const HeaderLink = styled(Link)`
   color: ${colors.lightPink};
 `
+
+export const ButtonCart = styled.a`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+`

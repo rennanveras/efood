@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { colors } from '../../styles/styles'
-import { Link } from 'react-router-dom'
 
 export const CardMenuContainer = styled.div`
   padding: 8px;

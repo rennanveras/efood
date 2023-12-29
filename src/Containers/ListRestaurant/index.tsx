@@ -7,7 +7,7 @@ type Props = {
   restaurants: TypeRestaurant[]
 }
 
-const ListRestarant = ({ restaurants }: Props) => {
+const ListRestaurant = ({ restaurants }: Props) => {
   const getRestaurantTags = (restaurant: TypeRestaurant) => {
     const tags = []
 
@@ -41,4 +41,4 @@ const ListRestarant = ({ restaurants }: Props) => {
   )
 }
 
-export default ListRestarant
+export default ListRestaurant

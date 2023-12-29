@@ -4,21 +4,25 @@ import * as S from './styles'
 import Modal from '../../components/Modal'
 import { useState } from 'react'
 import TypeMenu from '../../types/menu'
+import { useGetMenuQuery } from '../../services/api'
+import { useParams } from 'react-router-dom'
 
-type Props = {
-  product: TypeMenu[]
-}
+const ListMenu = () => {
+  const { id } = useParams()
 
-const ListMenu = ({ product }: Props) => {
+  const { data: product } = useGetMenuQuery(id!)
+
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const [productSelected, setproductSelected] = useState<TypeMenu>()
 
   const openModal = (id: number) => {
-    const itemMenu = product.find((item) => item.id === id)
+    if (product) {
+      const itemMenu = product.cardapio.find((item) => item.id === id)
 
-    if (itemMenu) {
-      setproductSelected(itemMenu)
-      setModalIsOpen(true)
+      if (itemMenu) {
+        setproductSelected(itemMenu)
+        setModalIsOpen(true)
+      }
     }
   }
 
@@ -26,7 +30,7 @@ const ListMenu = ({ product }: Props) => {
     <S.ContainerListMenu>
       <div className="container">
         <S.ListMenu>
-          {product.map((item) => (
+          {product?.cardapio.map((item) => (
             <li key={item.id}>
               <CardMenu
                 image={item.foto}
