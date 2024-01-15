@@ -4,13 +4,11 @@ import TypeMenu from '../../types/menu'
 type CartState = {
   items: TypeMenu[]
   isOpen: boolean
-  quantity: number
 }
 
 const initialState: CartState = {
   items: [],
-  isOpen: false,
-  quantity: 1
+  isOpen: false
 }
 
 const cartSlice = createSlice({
@@ -23,7 +21,7 @@ const cartSlice = createSlice({
       if (!product) {
         state.items.push(action.payload)
       } else {
-        state.quantity += 1
+        alert('Produto já adiconado ao carrinho')
       }
     },
     remove: (state, action: PayloadAction<number>) => {
