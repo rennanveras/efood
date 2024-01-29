@@ -39,6 +39,13 @@ export const SideBar = styled.aside`
     color: ${colors.cream};
     margin-bottom: 16px;
   }
+
+  .empty-message {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+  }
 `
 
 export const Overlay = styled.div`

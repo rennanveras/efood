@@ -1,5 +1,3 @@
-import { BsTwitterX, BsInstagram, BsFacebook } from 'react-icons/bs'
-
 import logo from '../../assets/img/logo.svg'
 import insta from '../../assets/img/gadgets/instagram.png'
 import face from '../../assets/img/gadgets/facebook.png'
@@ -12,7 +10,7 @@ const Footer = () => (
   <S.FooterContainer>
     <div className="container">
       <div>
-        <Link to="/">
+        <Link title="Clique para voltar para a página principal" to="/">
           <img src={logo} alt="" />
         </Link>
       </div>

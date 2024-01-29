@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import * as S from './styles'
 
 import { remove } from '../../store/reducers/Cart'

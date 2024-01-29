@@ -1,4 +1,5 @@
 import { BsCart3 } from 'react-icons/bs'
+import { IoArrowBack } from 'react-icons/io5'
 
 import logo from '../../assets/img/logo.svg'
 
@@ -6,7 +7,7 @@ import * as S from './styles'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { open, close } from '../../store/reducers/Cart'
+import { open } from '../../store/reducers/Cart'
 import { RootReducer } from '../../store'
 
 const Header = () => {
@@ -20,12 +21,23 @@ const Header = () => {
   return (
     <S.HeaderContainer>
       <div className="container">
-        <S.HeaderLink to="/">Restaurantes</S.HeaderLink>
-        <Link to="/">
-          <img src={logo} alt="" />
+        <S.HeaderLink
+          title="Clique aqui para voltar para os restaurantes"
+          to="/"
+        >
+          <p>Restaurantes</p>{' '}
+          <span className="btn-back">
+            <IoArrowBack />
+          </span>
+        </S.HeaderLink>
+        <Link title="clique aqui para voltar a página ínicial" to="/">
+          <h1>
+            <img src={logo} alt="Efood" />
+          </h1>
         </Link>
-        <S.ButtonCart onClick={openCart}>
-          {items.length} {items.length > 1 ? 'Produtos' : 'Produto'} <BsCart3 />
+        <S.ButtonCart role="button" onClick={openCart}>
+          {items.length}{' '}
+          <span>{items.length > 1 ? 'Produtos' : 'Produto'}</span> <BsCart3 />
         </S.ButtonCart>
       </div>
     </S.HeaderContainer>

@@ -1,16 +1,28 @@
-import CardMenu from '../../components/CardMenu'
-import * as S from './styles'
-
-import Modal from '../../components/Modal'
 import { useState } from 'react'
-import TypeMenu from '../../types/menu'
-import { useGetMenuQuery } from '../../services/api'
 import { useParams } from 'react-router-dom'
 
-const ListMenu = () => {
-  const { id } = useParams()
+import { useGetMenuQuery } from '../../services/api'
 
-  const { data: product } = useGetMenuQuery(id!)
+import CardMenu from '../../components/CardMenu'
+import Modal from '../../components/Modal'
+
+import TypeMenu from '../../types/menu'
+
+import * as S from './styles'
+import Loader from '../../components/Loader'
+
+type Props = {
+  isLoading: boolean
+}
+
+type MenuParams = {
+  id: string
+}
+
+const ListMenu = ({ isLoading }: Props) => {
+  const { id } = useParams() as MenuParams
+
+  const { data: product } = useGetMenuQuery(id)
 
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const [productSelected, setproductSelected] = useState<TypeMenu>()
@@ -25,6 +37,8 @@ const ListMenu = () => {
       }
     }
   }
+
+  if (isLoading) return <Loader />
 
   return (
     <S.ContainerListMenu>

@@ -4,18 +4,14 @@ import Hero from '../../Containers/Hero'
 import { useGetRestaurantsQuery } from '../../services/api'
 
 const Home = () => {
-  const { data: restaurants } = useGetRestaurantsQuery()
+  const { data: restaurants, isLoading } = useGetRestaurantsQuery()
 
-  if (restaurants) {
-    return (
-      <>
-        <Hero />
-        <ListRestaurant restaurants={restaurants} />
-      </>
-    )
-  }
-
-  return <h4>Carregando...</h4>
+  return (
+    <>
+      <Hero />
+      <ListRestaurant isLoading={isLoading} restaurants={restaurants} />
+    </>
+  )
 }
 
 export default Home

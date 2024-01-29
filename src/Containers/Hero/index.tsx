@@ -1,5 +1,4 @@
 import * as S from './styles'
-import * as Sg from '../../styles/styles'
 
 import logo from '../../assets/img/logo.svg'
 

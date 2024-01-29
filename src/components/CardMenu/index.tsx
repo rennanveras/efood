@@ -10,9 +10,9 @@ type Props = {
 }
 
 const CardMenu = ({ image, title, description, onClick, id }: Props) => {
-  const getDescription = (description: string) => {
-    if (description.length > 110) {
-      return `${description.slice(0, 100)}...`
+  const getDescription = (text: string) => {
+    if (text.length > 110) {
+      return `${text.slice(0, 100)}...`
     }
     return description
   }

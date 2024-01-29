@@ -5,14 +5,19 @@ import Banner from '../../Containers/Banner'
 import ListMenu from '../../Containers/ListMenu'
 
 import { useGetMenuQuery } from '../../services/api'
+import Loader from '../../components/Loader'
+
+type MenuParams = {
+  id: string
+}
 
 const Menu = () => {
-  const { id } = useParams()
+  const { id } = useParams() as MenuParams
 
-  const { data: restaurant } = useGetMenuQuery(id!)
+  const { data: restaurant, isLoading } = useGetMenuQuery(id)
 
   if (!restaurant) {
-    return <h1>carregando...</h1>
+    return <Loader />
   }
 
   return (
@@ -23,7 +28,7 @@ const Menu = () => {
         tipo={restaurant.tipo}
         title={restaurant.titulo}
       />
-      <ListMenu />
+      <ListMenu isLoading={isLoading} />
     </>
   )
 }

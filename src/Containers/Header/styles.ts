@@ -12,24 +12,51 @@ export const HeaderContainer = styled.header`
   color: ${colors.lightPink};
   font-size: 18px;
 
-  @media (max-width: ${breakPoints.tablet}) {
-    display: none;
-  }
-
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
+  h1 {
+    line-height: 0;
+  }
+
+  @media (max-width: ${breakPoints.tablet}) {
+    h1 {
+      img {
+        width: 90px;
+      }
+    }
+  }
 `
 
 export const HeaderLink = styled(Link)`
   color: ${colors.lightPink};
+
+  .btn-back {
+    display: none;
+    font-size: 24px;
+  }
+  @media (max-width: ${breakPoints.tablet}) {
+    p {
+      display: none;
+    }
+    .btn-back {
+      display: block;
+    }
+  }
 `
 
-export const ButtonCart = styled.a`
+export const ButtonCart = styled.span`
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 4px;
+
+  @media (max-width: ${breakPoints.tablet}) {
+    span {
+      display: none;
+    }
+  }
 `
