@@ -1,16 +1,13 @@
 import styled from 'styled-components'
 
-import background from '../../assets/img/background.png'
 import { breakPoints, colors } from '../../styles/styles'
 import { Link } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
-  background-image: url(${background});
-  padding-top: 44px;
-  padding-bottom: 66px;
   font-weight: bold;
-  color: ${colors.lightPink};
+  color: ${colors.PrimaryColor};
   font-size: 18px;
+  background-color: ${colors.SecundaryColor};
 
   .container {
     display: flex;
@@ -20,19 +17,24 @@ export const HeaderContainer = styled.header`
 
   h1 {
     line-height: 0;
+
+    img {
+      height: 140px;
+      object-fit: cover;
+    }
   }
 
   @media (max-width: ${breakPoints.tablet}) {
     h1 {
       img {
-        width: 90px;
+        height: 110px;
       }
     }
   }
 `
 
 export const HeaderLink = styled(Link)`
-  color: ${colors.lightPink};
+  color: ${colors.PrimaryColor};
 
   .btn-back {
     display: none;

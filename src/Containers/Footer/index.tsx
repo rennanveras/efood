@@ -1,7 +1,10 @@
-import logo from '../../assets/img/logo.svg'
-import insta from '../../assets/img/gadgets/instagram.png'
-import face from '../../assets/img/gadgets/facebook.png'
-import twitter from '../../assets/img/gadgets/twitter.png'
+import logo from '../../assets/img/logo.png'
+
+import {
+  FaInstagram,
+  FaSquareFacebook,
+  FaSquareXTwitter
+} from 'react-icons/fa6'
 
 import * as S from './styles'
 import { Link } from 'react-router-dom'
@@ -11,13 +14,13 @@ const Footer = () => (
     <div className="container">
       <div>
         <Link title="Clique para voltar para a página principal" to="/">
-          <img src={logo} alt="" />
+          <img className="logo" src={logo} alt="" />
         </Link>
       </div>
       <S.ListRedeSocial>
-        <img src={insta} alt="" />
-        <img src={face} alt="" />
-        <img src={twitter} alt="" />
+        <FaInstagram size={30} />
+        <FaSquareFacebook size={30} />
+        <FaSquareXTwitter size={30} />
       </S.ListRedeSocial>
       <S.InfoFooter>
         A efood é uma plataforma para divulgação de estabelecimentos, a

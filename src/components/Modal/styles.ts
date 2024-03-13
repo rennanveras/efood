@@ -29,7 +29,7 @@ export const Modal = styled.div`
   }
 
   .container {
-    background-color: ${colors.lightPink};
+    background-color: ${colors.PrimaryColor};
     padding: 32px;
     position: relative;
     color: ${colors.white};

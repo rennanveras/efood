@@ -22,7 +22,7 @@ const Menu = () => {
 
   return (
     <>
-      <Header />
+      <Header enableButtonReturn />
       <Banner
         imageBanner={restaurant.capa}
         tipo={restaurant.tipo}

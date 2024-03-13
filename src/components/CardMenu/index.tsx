@@ -22,7 +22,7 @@ const CardMenu = ({ image, title, description, onClick, id }: Props) => {
       <h3>{title}</h3>
       <p>{getDescription(description)}</p>
       <Button title="Ver produto" type="button" onClick={() => onClick(id)}>
-        Adicionar ao carrinho
+        Ver prato
       </Button>
     </S.CardMenuContainer>
   )

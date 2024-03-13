@@ -1,16 +1,9 @@
 import * as S from './styles'
 
-import logo from '../../assets/img/logo.svg'
-
 const Hero = () => {
   return (
     <S.Hero>
-      <div className="container">
-        <img src={logo} alt="" />
-        <S.Title>
-          Viva experiências gastronômicas no conforto da sua casa
-        </S.Title>
-      </div>
+      <div className="container"></div>
     </S.Hero>
   )
 }

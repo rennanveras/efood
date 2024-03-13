@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const colors = {
-  lightPink: '#E66767',
-  Lightbeige: ' #FFF8F2',
-  cream: '#FFEBD9',
+  PrimaryColor: '#3a5a40',
+  SecundaryColor: '#edede9',
+  BackgroundColor: ' #f1f1f1',
   white: '#FFFFFF'
 }
 
@@ -23,7 +23,7 @@ export const GlobalCss = createGlobalStyle`
     list-style: none;
 
     body {
-      background-color: ${colors.Lightbeige};
+      background-color: ${colors.BackgroundColor};
     }
 
     .container {

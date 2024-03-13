@@ -19,7 +19,7 @@ export const SideBar = styled.aside`
   z-index: 3;
   max-width: 360px;
   width: 100%;
-  background-color: ${colors.lightPink};
+  background-color: ${colors.PrimaryColor};
   padding: 32px 8px;
 
   @media (max-width: ${breakPoints.tablet}) {
@@ -36,7 +36,7 @@ export const SideBar = styled.aside`
   .total-price {
     display: flex;
     justify-content: space-between;
-    color: ${colors.cream};
+    color: ${colors.SecundaryColor};
     margin-bottom: 16px;
   }
 

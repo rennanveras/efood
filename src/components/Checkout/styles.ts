@@ -9,7 +9,7 @@ type InputGroupProps = {
 export const ContentCheckout = styled.div`
   font-size: 14px;
   font-weight: bold;
-  color: ${colors.cream};
+  color: ${colors.SecundaryColor};
 
   h3 {
     font-size: 16px;
@@ -49,10 +49,10 @@ export const InputGroup = styled.div<InputGroupProps>`
   }
 
   input {
-    background-color: ${colors.cream};
+    background-color: ${colors.SecundaryColor};
     color: black;
     padding: 8px 6px;
-    border: 2px solid ${colors.cream};
+    border: 2px solid ${colors.SecundaryColor};
     width: 100%;
 
     &.error {

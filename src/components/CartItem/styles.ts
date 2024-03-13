@@ -6,8 +6,8 @@ import trash from '../../assets/img/gadgets/trash.png'
 export const ItemCart = styled.li`
   display: flex;
   gap: 8px;
-  color: ${colors.lightPink};
-  background-color: ${colors.cream};
+  color: ${colors.PrimaryColor};
+  background-color: ${colors.SecundaryColor};
   padding: 8px 8px 12px 8px;
   position: relative;
 

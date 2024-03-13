@@ -2,13 +2,18 @@ import styled from 'styled-components'
 
 import { colors } from '../../styles/styles'
 import { Tag } from '../Tag/styles'
+import { Link } from 'react-router-dom'
 
 export const Card = styled.li`
   display: flex;
   flex-direction: column;
   position: relative;
   border-radius: 6px;
-  color: ${colors.lightPink};
+  color: ${colors.PrimaryColor};
+`
+
+export const LinkArea = styled(Link)`
+  color: ${colors.PrimaryColor};
 `
 
 export const Img = styled.img`
@@ -16,6 +21,8 @@ export const Img = styled.img`
   height: 216px;
   object-fit: cover;
   display: block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 `
 export const AreaDestaque = styled.div`
   position: absolute;
@@ -29,9 +36,11 @@ export const AreaDestaque = styled.div`
 
 export const AreaInfos = styled.div`
   padding: 8px;
-  border: 1px solid ${colors.lightPink};
+  border: 1px solid ${colors.PrimaryColor};
   border-top: transparent;
   background-color: ${colors.white};
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 `
 
 export const Title = styled.h3`

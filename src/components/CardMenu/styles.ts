@@ -6,8 +6,8 @@ export const CardMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  color: ${colors.cream};
-  background-color: ${colors.lightPink};
+  color: ${colors.SecundaryColor};
+  background-color: ${colors.PrimaryColor};
 
   img {
     width: 100%;

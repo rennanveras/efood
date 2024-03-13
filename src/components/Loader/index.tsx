@@ -6,7 +6,7 @@ import { Container } from './styles'
 const Loader = () => {
   return (
     <Container>
-      <PuffLoader color={colors.lightPink} />
+      <PuffLoader color={colors.PrimaryColor} />
     </Container>
   )
 }

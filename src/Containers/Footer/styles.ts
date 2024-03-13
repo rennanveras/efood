@@ -2,9 +2,13 @@ import styled from 'styled-components'
 import { colors } from '../../styles/styles'
 
 export const FooterContainer = styled.footer`
-  background-color: ${colors.cream};
+  background-color: ${colors.SecundaryColor};
   padding: 40px 0;
-  color: ${colors.lightPink};
+  color: ${colors.PrimaryColor};
+
+  .logo {
+    height: 140px;
+  }
 
   .container {
     display: flex;
@@ -18,6 +22,10 @@ export const ListRedeSocial = styled.div`
   display: flex;
   gap: 8px;
   justify-content: center;
+
+  svg {
+    cursor: pointer;
+  }
 `
 
 export const InfoFooter = styled.p`
